@@ -1,33 +1,52 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #e0efff;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+body{
+ background:#0a1f44;
+ color:white;
+ font-family:Arial;
+ text-align:center;
+ margin:0;
 }
 
-#app-container {
-    width: 90%;
-    max-width: 800px;
-    background-color: #ffffff;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
+h1{
+ color:#1e90ff;
 }
 
-#sermon-video {
-    width: 100%;
-    height: auto;
-    margin-bottom: 20px;
+.videoWrapper{
+ position:relative;
+ width:95%;
+ margin:auto;
+ margin-top:10px;
 }
 
-#bible-verse-display {
-    font-size: 1.5em;
-    color: #003366;
-    padding: 10px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 5px;
+video{
+ width:100%;
+ background:black;
+ min-height:200px;
 }
+
+#overlay{
+ position:absolute;
+ bottom:10px;
+ left:10px;
+ right:10px;
+
+ background:rgba(0,0,60,0.85);
+ color:white;
+
+ padding:15px;
+ font-size:20px;
+ border-left:5px solid #1e90ff;
+ border-radius:8px;
+}
+
+.controls{
+ margin-top:15px;
+}
+
+button{
+ padding:10px;
+ background:#1e90ff;
+ border:none;
+ color:white;
+ margin:5px;
+    }
+    
