@@ -1,28 +1,30 @@
-function normalize(text){
-
- return text.toLowerCase()
+function normalize(t){
+ return t.toLowerCase()
  .replace("chapter","")
  .replace("verse","")
- .replace("open to","")
- .replace("book of","");
+ .replace("to","")
+ .replace("open","")
+ .replace("book of","")
+ .replace(":"," ");
 }
 
 function detectBibleVerse(text){
 
  text = normalize(text);
 
+ // now supports ranges like 16 18
  const pattern =
- /(genesis|exodus|leviticus|numbers|deuteronomy|joshua|judges|ruth|1 samuel|2 samuel|1 kings|2 kings|psalm|proverbs|isaiah|jeremiah|matthew|mark|luke|john|acts|romans|1 corinthians|2 corinthians|galatians|ephesians|philippians|colossians|hebrews|james|1 peter|2 peter|revelation)\s*(\d+)\s*(\d+)/;
+ /(john|psalm|romans|matthew|mark|luke|acts|genesis)\s*(\d+)\s*(\d+)(?:\s*(\d+))?/;
 
- let match = text.match(pattern);
+ let m = text.match(pattern);
 
- if(match){
+ if(m){
+   let book = m[1];
+   let chapter = m[2];
+   let start = m[3];
+   let end = m[4] || m[3];
 
-   let book = match[1];
-   let chapter = match[2];
-   let verse = match[3];
-
-   loadVerse(book, chapter, verse);
+   loadRange(book, chapter, start, end);
  }
-   }
-  
+}
+ 
