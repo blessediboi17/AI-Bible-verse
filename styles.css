@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0efff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#app-container {
+    width: 90%;
+    max-width: 800px;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#sermon-video {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+#bible-verse-display {
+    font-size: 1.5em;
+    color: #003366;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+}
