@@ -1,17 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Bible Verse</title>
-    <link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>AI Bible Verse</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div id="app-container">
-        <video id="sermon-video" controls autoplay></video>
-        <div id="bible-verse-display"></div>
-    </div>
-    <script src="script.js"></script>
+
+<h1>AI Bible Verse</h1>
+
+<div class="videoWrapper">
+
+ <video id="stream" controls autoplay>
+   <!-- Later you can put livestream link here -->
+ </video>
+
+ <div id="overlay">
+   Waiting for sermon voice...
+ </div>
+
+</div>
+
+<div class="controls">
+
+<select onchange="changeVersion(this.value)">
+ <option value="kjv">KJV</option>
+ <option value="niv">NIV</option>
+</select>
+
+<button onclick="startListening()">
+ Start Listening
+</button>
+
+<p id="status">Status: idle</p>
+
+</div>
+
+<script src="recognizer.js"></script>
+<script src="detector.js"></script>
+<script src="script.js"></script>
+
 </body>
-</html>
-  
+    </html>
+    
