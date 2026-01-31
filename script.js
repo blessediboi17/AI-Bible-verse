@@ -27,3 +27,8 @@ function showOverlay(book, chapter, s, e, text){
  ${text}
  `;
 }
+
+function loadStream(){
+ let url = document.getElementById("liveUrl").value;
+ document.getElementById("stream").src = url;
+}
